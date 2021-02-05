@@ -5,5 +5,9 @@
   <li> Price: <%= @item.price %> $</li>  
   <li> Weight: <%= @item.weight %> </li>
   <li> Description: <%= @item.description %> </li>
-  <li ><%= button_to 'update', edit_item_path(@item),method: :get %> </li>
+  
 </ul>
+
+<%= link_to "edit #{@item.name}", edit_item_path %> <br/>
+<%= link_to 'delete', item_path(@item), method: :delete %><br/>
+<%= link_to 'index',items_path%>
